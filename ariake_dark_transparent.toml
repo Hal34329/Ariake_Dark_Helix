@@ -8,7 +8,7 @@ hint = "ariake-hint" # Code diagnostics hints (LSP).
 diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 
 # UI Style
-'ui.background' = { fg = "ariake-blue4", bg = "ariake-grey6" } # Default background color. Default for Ariake is fg = "ariake-blue4", bg = "ariake-grey6"
+'ui.background' = { } # Default background color. Default for Ariake is fg = "ariake-blue4", bg = "ariake-grey6"
 'ui.window' = "ariake-grey2" # Window border between splits.
 'ui.gutter' = "ariake-grey2" # Left gutter for diagnostics and breakpoints.
 
@@ -38,7 +38,7 @@ diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 'ui.menu.selected' = "ariake-purple2" # Selected autocomplete item.
 
 'ui.popup' = "ariake-purple2" # Documentation popups (space-k).
-'ui.popup.info' = { fg = "ariake-purple2", bg = "ariake-grey6" } # Info popups box (space mode menu). Transparent "ariake-purple2"
+'ui.popup.info' = "ariake-purple2" # Info popups box (space mode menu). Transparent "ariake-purple2"
 
 # Syntax style
 'special' = "ariake-grey1" # Special symbols e.g `?` in Rust, `...` in Hare.
