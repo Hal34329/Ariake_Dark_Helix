@@ -9,111 +9,111 @@
 
 # GENERAL ==============================
 
-warning = { } # Editor warnings.
-error = { } # Editor errors, like mis-typing a command.
-info = { } # Contextual info in diagnostic messages (LSP).
-hint = { } # Code diagnostics hints (LSP).
-diagnostic = { } # Code diagnostics in editing area (LSP).
+warning = "ariake-warning" # Editor warnings.
+error = "ariake-error" # Editor errors, like mis-typing a command. Done
+info = "ariake-info" # Contextual info in diagnostic messages (LSP).
+hint = "ariake-hint" # Code diagnostics hints (LSP).
+diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 
 # UI ==============================
 # For styling helix itself.
 
-'ui.background' = { } # Default background color. Default for Ariake is fg = "#85b1df", bg = "#2e323e"
+'ui.background' = {  } # Default background color. Default for Ariake is fg = "#85b1df", bg = "#2e323e"
 'ui.window' = "ariake-line" # Window border between splits.
-'ui.gutter' = { } # Left gutter for diagnostics and breakpoints.
+'ui.gutter' = "ariake-line" # Left gutter for diagnostics and breakpoints.
 
 'ui.text' = "ariake-ui-text" # Default text color.
 'ui.text.focus' = "ariake-focus" # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = { } # Info popup contents (space mode menu).
+'ui.text.info' = "ariake-ui-text" # Info popup contents (space mode menu).
 
-'ui.cursor' = {  } # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
+'ui.cursor' = "ariake-method" # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
 'ui.cursor.primary' = { fg = "ariake-line", modifiers = ["reversed"] } # The primary cursor when there are multiple (shift-c).
 'ui.cursor.insert' = { fg = "ariake-line", modifiers = ["reversed"] } # The cursor in insert mode (i).
-'ui.cursor.select' = { fg = "ariake-error", modifier = ["reversed"] } # The cursor in select mode (v).
-'ui.cursor.match' = { } # The matching parentheses of that under the cursor.
+'ui.cursor.select' = { fg = "ariake-parameter", modifiers = ["reversed"] } # The cursor in select mode (v).
+'ui.cursor.match' = { modifiers = ["reversed"] } # The matching parentheses of that under the cursor.
 
-'ui.selection' = { } # All currently selected text.
-'ui.selection.primary' = { } # The primary selection when there are multiple.
+'ui.selection' = { bg = "ariake-highlight", modifiers = ["reversed"] } # All currently selected text.
+'ui.selection.primary' = {bg = "ariake-highlight"} # The primary selection when there are multiple.
 
 'ui.linenr' = "ariake-line" # Line numbers.
 'ui.linenr.selected' = "ariake-line-selected" # Current line number.
 
-'ui.virtual' = { } # Namespace for additions to the editing area.
-'ui.virtual.ruler' = { } # Vertical rulers (colored columns in editing area).
-'ui.virtual.whitespace' = { } # Whitespace markers in editing area.
+'ui.virtual' = { } # Namespace for additions to the editing area. Borrar
+'ui.virtual.ruler' = { } # Vertical rulers (colored columns in editing area). Borrar
+'ui.virtual.whitespace' = { } # Whitespace markers in editing area. Borrar
 
-'ui.statusline' = { } # Status line.
-'ui.statusline.active' = { } # Status line in focused windows.
-'ui.statusline.inactive' = { } # Status line in unfocused windows.
-"ui.statusline.normal" = { } # Statusline mode during normal mode (only if editor.color-modes is enabled)
-"ui.statusline.insert" = { } # Statusline mode during insert mode (only if editor.color-modes is enabled)
-"ui.statusline.select" = { } # Statusline mode during select mode (only if editor.color-modes is enabled)
+'ui.statusline' = { } # Status line. Borrar
+'ui.statusline.active' = { } # Status line in focused windows. Borrar
+'ui.statusline.inactive' = "ariake-comment" # Status line in unfocused windows.
+"ui.statusline.normal" = { } # Statusline mode during normal mode (only if editor.color-modes is enabled). Borrar
+"ui.statusline.insert" = { } # Statusline mode during insert mode (only if editor.color-modes is enabled). Borrar
+"ui.statusline.select" = { } # Statusline mode during select mode (only if editor.color-modes is enabled). Borrar
 
 'ui.help' = { fg = "ariake-focus" } # `:command` descriptions above the command line.
 
-'ui.highlight' = { } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
+'ui.highlight' = { bg = "ariake-highlight" } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
 
-'ui.menu' = { } # Autocomplete menu.
-'ui.menu.selected' = { } # Selected autocomplete item.
+'ui.menu' = "ariake-method" # Autocomplete menu.
+'ui.menu.selected' = "ariake-constant" # Selected autocomplete item.
 
-'ui.popup' = { } # Documentation popups (space-k).
-'ui.popup.info' = { } # Info popups box (space mode menu).
+'ui.popup' = "ariake-focus" # Documentation popups (space-k).
+'ui.popup.info' = "ariake-focus" # Info popups box (space mode menu). { fg = "ariake-focus", bg = "ariake-background" }
 
 
 # SYNTAX HIGHLIGHTING ==============================
 # All the keys here are Treesitter scopes.
 
-'property' = { } # Regex group names.
-'special' = { } # Special symbols e.g `?` in Rust, `...` in Hare.
+'property' = {} # Regex group names. Borrar
+'special' = "ariake-punctuation" # Special symbols e.g `?` in Rust, `...` in Hare.
 'attribute' = "ariake-attribute" # Class attributes, html tag attributes.
 
-'type' = { } # Variable type, like integer or string, including program defined classes, structs etc..
-'type.builtin' = { } # Primitive types of the language (string, int, float).
-'type.enum.variant' = { } # A variant of an enum.
+'type' = "ariake-attribute" # Variable type, like integer or string, including program defined classes, structs etc..
+'type.builtin' = "ariake-string" # Primitive types of the language (string, int, float).
+'type.enum.variant' = { } # A variant of an enum. Borrar.
 
 'constructor' = { fg = "ariake-method", modifiers = ["bold"] } # Constructor method for a class or struct.
 
 'constant' = "ariake-constant"  # Constant value
-'constant.builtin' = { } # Special constants like `true`, `false`, `none`, etc.
-'constant.builtin.boolean' = {} # True or False.
-'constant.character' = { } # Constant of character type.
-'constant.character.escape' = { } # escape codes like \n.
-'constant.numeric'  = { } # constant integer or float value.
+'constant.builtin' = "ariake-numeric-integer" # Special constants like `true`, `false`, `none`, etc.
+'constant.builtin.boolean' = { } # True or False. Borrar
+'constant.character' = { } # Constant of character type. Borrar
+'constant.character.escape' = { } # escape codes like \n. Borrar
+'constant.numeric'  = { } # constant integer or float value. Borrar
 'constant.numeric.integer' = "ariake-numeric-integer" # constant integer value.
-'constant.numeric.float' = { } # constant float value.
+'constant.numeric.float' = { } # constant float value. Borrar
 
 'string' = "ariake-string" # String literal.
-'string.regexp' = "ariake-error" # Regular expression literal.
-'string.special' = { } # Strings containing a path, URL, etc.
-'string.special.path' = { } # String containing a file path.
-'string.special.url' = { } # String containing a web URL.
-'string.special.symbol' = { } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords.
+'string.regexp' = "ariake-operator" # Regular expression literal. Borrar
+'string.special' = { } # Strings containing a path, URL, etc. Borrar
+'string.special.path' = { } # String containing a file path. Borrar
+'string.special.url' = { } # String containing a web URL. Borrar
+'string.special.symbol' = { } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords. Borrar
 
 'comment' = "ariake-comment" # This is a comment.
-'comment.line' = { } # Line comments, like this.
-'comment.block' = { } # Block comments, like /* this */ in some languages.
-'comment.block.documentation' = { } # Doc comments, e.g '///' in rust.
+'comment.line' = { } # Line comments, like this. Borrar
+'comment.block' = { } # Block comments, like /* this */ in some languages. Borrar
+'comment.block.documentation' = { } # Doc comments, e.g '///' in rust. Borrar
 
 'variable' = "ariake-variable" # Variable names.
 'variable.builtin' = "ariake-variable" # Language reserved variables: `this`, `self`, `super`, etc.
 'variable.parameter' = "ariake-parameter" # Function parameters.
-'variable.other.member' = { } # Fields of composite data types (e.g. structs, unions).
+'variable.other.member' = "ariake-diff-plus" # Fields of composite data types (e.g. structs, unions).
 
-'label' = { } # Loop labels, among other things.
+'label' = "ariake-ui-text" # Loop labels, among other things.
 
 'punctuation' = "ariake-punctuation" # Any punctuation symbol.
 'punctuation.delimiter' = "ariake-punctuation" # Commas, colons or other delimiter depending on the language.
 'punctuation.bracket' = "ariake-punctuation" # Parentheses, angle brackets, etc.
 
 'keyword' = "ariake-import" # Language reserved keywords.
-'keyword.control' = { } # Control keywords.
+'keyword.control' = "ariake-import" # Control keywords.
 'keyword.control.conditional' = "ariake-import" # `if`, `else`, `elif`.
-'keyword.control.repeat' = { } # `for`, `while`, `loop`.
+'keyword.control.repeat' = "ariake-import" # `for`, `while`, `loop`.
 'keyword.control.import' = "ariake-import" # `import`, `export` `use`.
 'keyword.control.return' = "ariake-import" # `return` in most languages.
-'keyword.control.exception' = { } # `try`, `catch`, `raise`/`throw` and related.
-'keyword.operator' = { } # `or`, `and`, `in`.
-'keyword.directive' = { } # Preprocessor directives (#if in C...).
+'keyword.control.exception' = "ariake-import" # `try`, `catch`, `raise`/`throw` and related.
+'keyword.operator' = "ariake-import" # `or`, `and`, `in`.
+'keyword.directive' = "ariake-import" # Preprocessor directives (#if in C...).
 'keyword.function' = "ariake-function" # The keyword to define a function: 'def', 'fun', 'fn'.
 
 'operator' = { fg = "ariake-operator", modifiers = ["bold"] } # Logical, mathematical, and other operators.
@@ -141,16 +141,16 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 'markup.heading.6' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 6 color.
 'markup.heading.marker' = { fg = "ariake-headings", modifiers = ["bold"] } # Hashtag color on Markdown headings.
 
-'markup.list' = { }
-'markup.list.numbered' = { } # Numbered list.
-'markup.list.unnumbered' = { } # Bullet point list.
+'markup.list' = { } # Borrar
+'markup.list.numbered' = { } # Numbered list. Borrar
+'markup.list.unnumbered' = { } # Bullet point list. Borrar
 
 'markup.bold' = { fg = "ariake-markup-bold", modifiers = ["bold"] } # Bold text.
 'markup.italic' = { fg = "ariake-markup-italic", modifiers = ["italic"] } # Italicised text.
 
-'markup.link' = { }
+'markup.link' = { } # Borrar
 'markup.link.url' = "ariake-markup-url" # Urls pointed to by links.
-'markup.link.label' = { } # Non-URL link references.
+'markup.link.label' = "ariake-markup-url" # Non-URL link references.
 'markup.link.text' = "ariake-markup-linktext" # URL and image descriptions in links.
 
 'markup.quote' = "ariake-markup-quote" # `> Quotes` in Markdown.
@@ -159,66 +159,87 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 # Markup - Interface ==============================
 # "These scopes are used for theming the editor interface."
 
-'markup.normal' = { }
-'markup.normal.completion' = { } # For completion doc popup ui.
-'markup.normal.raw' = { } # For hover popup ui.
+'markup.normal' = { } # Borrar
+'markup.normal.completion' = { } # For completion doc popup ui. Borrar
+'markup.normal.raw' = { } # For hover popup ui. Borrar
 
 'markup.heading.completion' = { } # Headings for completion doc popup ui.
 'markup.heading.raw' = { } # Headings for hover popup ui.
 
-'markup.raw' = { } # Code block in Markdown.
-'markup.raw.block' = { } # Multiline (```) codeblock in Markdown.
-'markup.raw.inline' = { } # `Inline code block` in Markdown.
-'markup.raw.inline.completion' = { } # ?
-'markup.raw.inline.hover' = { } # ?
+'markup.raw' = { } # Code block in Markdown. Borrar
+'markup.raw.block' = { } # Multiline (```) codeblock in Markdown. Borrar
+'markup.raw.inline' = { } # `Inline code block` in Markdown. Borrar
+'markup.raw.inline.completion' = { } # ? Borrar
+'markup.raw.inline.hover' = { } # ? Borrar
 
 # Diff ==============================
 # Version control changes.
 
 'diff.plus' = { fg = "ariake-diff-plus", modifiers = ["bold"] } # Additions.
 'diff.minus' = { fg = "ariake-diff-minus", modifiers = ["bold"]} # Deletions.
-'diff.delta' = { } # Modifications.
-'diff.delta.moved' = { } # Renamed or moved files.
+'diff.delta' = { fg = "ariake-import" } # Modifications.
+'diff.delta.moved' = { fg = "ariake-variable", modifiers = ["italic"] } # Renamed or moved files.
 
 
 [palette] # Define your custom colors here.
-ariake-punctuation = "#b9bed5"
-ariake-attribute = "#a96fed"
-ariake-comment = "#666973"
-ariake-constant = "#7f7ce3"
-ariake-function = "#7f7ce3"
-ariake-import = "#7f7ce3"
-ariake-string = "#59ccfaff"
-ariake-tag = "#73b3e7"
-
-ariake-operator = "#93DDFB"
-ariake-ui-text = "#b9bed5"
-ariake-numeric-integer = "#e89dfc"
-ariake-parameter = "#555b6eff"
-ariake-method = "#fafafa"
-
-ariake-variable = "#85b1df"
-ariake-headings = "#FAFAFA"
-ariake-markup-bold = "#e89dfc"
-ariake-markup-italic = "#7f7ce3"
-ariake-markup-quote = "#e89dfc"
-ariake-markup-url = "#e89dfc"
-ariake-markup-linktext = "#85b1df"
-
-ariake-diff-minus = "#7f7ce3"
-ariake-diff-plus = "#85b1df"
-
-ariake-line = "#666973"
-ariake-line-selected = "#c6c8cfff"
-
-ariake-focus = "#7f7ce3"
-ariake-highlight = "#686a70ff"
-
-ariake-foreground = "#85b1df"
-ariake-background = "#2e323e"
-
 ariake-warning = "#dc64fdff" 
 ariake-error = "#ff2727ff" 
 ariake-info = "#e5e773ff" 
 ariake-hint = "#7fe37cff" 
 ariake-diagnostic = "#fd0069ff"
+
+ariake-punctuation = "#b9bed5"
+ariake-ui-text = "#b9bed5"
+ariake-grey1 = "#B9BED5" #OG
+
+ariake-attribute = "#a96fed"
+ariake-purple1 = "#A96FED" #OG
+
+ariake-comment = "#666973"
+ariake-line = "#666973"
+ariake-grey2 = "#666973" # OG
+
+ariake-constant = "#7f7ce3"
+ariake-function = "#7f7ce3"
+ariake-import = "#7f7ce3"
+ariake-markup-italic = "#7f7ce3"
+ariake-diff-minus = "#7f7ce3"
+ariake-focus = "#7f7ce3"
+ariake-purple2 = "#7F7CE3" #OG
+
+ariake-string = "#59ccfaff"
+ariake-blue1 = "#59CCFAFF" #OG
+
+ariake-tag = "#73b3e7"
+ariake-blue2 = "#73B3E7" #OG
+
+ariake-operator = "#93DDFB"
+ariake-blue3 = "#93DDFB" #OG
+
+ariake-numeric-integer = "#e89dfc"
+ariake-markup-bold = "#e89dfc"
+ariake-markup-quote = "#e89dfc"
+ariake-markup-url = "#e89dfc"
+ariake-purple3 = "#E89DFC" #OG
+
+ariake-parameter = "#555b6eff"
+ariake-grey3 = "#555B6EFF" #OG
+
+ariake-method = "#fafafa"
+ariake-headings = "#FAFAFA"
+ariake-white = "#FAFAFA" #OG
+
+ariake-variable = "#85b1df"
+ariake-markup-linktext = "#85b1df"
+ariake-diff-plus = "#85b1df"
+ariake-foreground = "#85b1df"
+ariake-blue4 = "#85B1DF" #OG
+
+ariake-line-selected = "#c6c8cfff"
+ariake-grey4 = "#C6C8CFFF" #OG
+
+ariake-highlight = "#686a70ff"
+ariake-grey5 = "#686A70FF" #OG
+
+ariake-background = "#2e323e"
+ariake-grey6 = "#2E323E" #OG
