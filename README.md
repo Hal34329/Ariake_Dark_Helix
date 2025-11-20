@@ -1,6 +1,11 @@
 # Ariake Dark for Helix
 Ariake Dark Theme based on VSCode [Ariake Dark] for Helix which is based on [Ariake Dark Syntax theme] by @[pathtrk] and other variants like [Ariake Vim Colors] by @[jim-at-jibba]
 
+## How to install it
+Just add the .toml files in the `~/.config/helix/themes` folder (or `C:/Users/<USER>/AppData/Roaming/helix/themes` on Windows) then on `~/.config/helix/config.toml` or `C:/Users/<USER>/AppData/Roaming/helix/config.toml` write `theme = "Ariake_dark"` or `theme = "Ariake_dark_transparent"`. 
+
+You can also try it using `:theme Ariake_dark` or `:theme Ariake_dark_transparent` but it won't keep it until you modify the `config.toml`.
+
 ## Examples
 ### Normal theme
 **HTML**
@@ -46,12 +51,6 @@ Ariake Dark Theme based on VSCode [Ariake Dark] for Helix which is based on [Ari
 
 **Symbol picker**
 !["Symbol picker"][symbol_picker_transparent]
-
-## How to install it
-Just add the .toml files in the `~/.config/helix/themes` folder (or `C:/Users/<USER>/AppData/Roaming/helix/themes` on Windows) then on `~/.config/helix/config.toml` or `C:/Users/<USER>/AppData/Roaming/helix/config.toml` write `theme = "Ariake_dark"` or `theme = "Ariake_dark_transparent"`. 
-
-You can also try it using `:theme Ariake_dark` or `:theme Ariake_dark_transparent` but it won't keep it until you modify the `config.toml`.
-
 
 [Ariake Dark]: https://marketplace.visualstudio.com/items?itemName=wart.ariake-dark "VSCode theme"
 [Ariake Dark Syntax Theme]: https://github.com/pathtrk/ariake-dark-syntax "Original theme for Atom"
