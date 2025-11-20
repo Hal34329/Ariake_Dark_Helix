@@ -182,17 +182,13 @@ diagnostic = { } # Code diagnostics in editing area (LSP).
 
 
 [palette] # Define your custom colors here.
-ariake-error = "#ff0000ff"
-
-
-
 ariake-punctuation = "#b9bed5"
 ariake-attribute = "#a96fed"
 ariake-comment = "#666973"
 ariake-constant = "#7f7ce3"
 ariake-function = "#7f7ce3"
 ariake-import = "#7f7ce3"
-ariake-string = "#01b3faff"
+ariake-string = "#59ccfaff"
 ariake-tag = "#73b3e7"
 
 ariake-operator = "#93DDFB"
@@ -216,3 +212,13 @@ ariake-line = "#666973"
 ariake-line-selected = "#c6c8cfff"
 
 ariake-focus = "#7f7ce3"
+ariake-highlight = "#686a70ff"
+
+ariake-foreground = "#85b1df"
+ariake-background = "#2e323e"
+
+ariake-warning = "#dc64fdff" 
+ariake-error = "#ff2727ff" 
+ariake-info = "#e5e773ff" 
+ariake-hint = "#7fe37cff" 
+ariake-diagnostic = "#fd0069ff"
