@@ -18,25 +18,25 @@ diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 # UI ==============================
 # For styling helix itself.
 
-'ui.background' = {  } # Default background color. Default for Ariake is fg = "#85b1df", bg = "#2e323e"
-'ui.window' = "ariake-line" # Window border between splits.
-'ui.gutter' = "ariake-line" # Left gutter for diagnostics and breakpoints.
+'ui.background' = {  } # Default background color. Default for Ariake is fg = "ariake-blue4", bg = "ariake-grey6"
+'ui.window' = "ariake-grey2" # Window border between splits.
+'ui.gutter' = "ariake-grey2" # Left gutter for diagnostics and breakpoints.
 
-'ui.text' = "ariake-ui-text" # Default text color.
-'ui.text.focus' = "ariake-focus" # Selection highlight in buffer-picker or file-picker.
-'ui.text.info' = "ariake-ui-text" # Info popup contents (space mode menu).
+'ui.text' = "ariake-grey1" # Default text color.
+'ui.text.focus' = "ariake-purple2" # Selection highlight in buffer-picker or file-picker.
+'ui.text.info' = "ariake-grey1" # Info popup contents (space mode menu).
 
-'ui.cursor' = "ariake-method" # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
-'ui.cursor.primary' = { fg = "ariake-line", modifiers = ["reversed"] } # The primary cursor when there are multiple (shift-c).
-'ui.cursor.insert' = { fg = "ariake-line", modifiers = ["reversed"] } # The cursor in insert mode (i).
-'ui.cursor.select' = { fg = "ariake-parameter", modifiers = ["reversed"] } # The cursor in select mode (v).
+'ui.cursor' = "ariake-white" # Fallback cursor colour, non-primary cursors when there are multiple (shift-c).
+'ui.cursor.primary' = { fg = "ariake-grey2", modifiers = ["reversed"] } # The primary cursor when there are multiple (shift-c).
+'ui.cursor.insert' = { fg = "ariake-grey2", modifiers = ["reversed"] } # The cursor in insert mode (i).
+'ui.cursor.select' = { fg = "ariake-grey3", modifiers = ["reversed"] } # The cursor in select mode (v).
 'ui.cursor.match' = { modifiers = ["reversed"] } # The matching parentheses of that under the cursor.
 
-'ui.selection' = { bg = "ariake-highlight", modifiers = ["reversed"] } # All currently selected text.
-'ui.selection.primary' = {bg = "ariake-highlight"} # The primary selection when there are multiple.
+'ui.selection' = { bg = "ariake-grey5", modifiers = ["reversed"] } # All currently selected text.
+'ui.selection.primary' = {bg = "ariake-grey5"} # The primary selection when there are multiple.
 
-'ui.linenr' = "ariake-line" # Line numbers.
-'ui.linenr.selected' = "ariake-line-selected" # Current line number.
+'ui.linenr' = "ariake-grey2" # Line numbers.
+'ui.linenr.selected' = "ariake-grey4" # Current line number.
 
 'ui.virtual' = { } # Namespace for additions to the editing area. Borrar
 'ui.virtual.ruler' = { } # Vertical rulers (colored columns in editing area). Borrar
@@ -44,87 +44,87 @@ diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 
 'ui.statusline' = { } # Status line. Borrar
 'ui.statusline.active' = { } # Status line in focused windows. Borrar
-'ui.statusline.inactive' = "ariake-comment" # Status line in unfocused windows.
+'ui.statusline.inactive' = "ariake-grey2" # Status line in unfocused windows.
 "ui.statusline.normal" = { } # Statusline mode during normal mode (only if editor.color-modes is enabled). Borrar
 "ui.statusline.insert" = { } # Statusline mode during insert mode (only if editor.color-modes is enabled). Borrar
 "ui.statusline.select" = { } # Statusline mode during select mode (only if editor.color-modes is enabled). Borrar
 
-'ui.help' = { fg = "ariake-focus" } # `:command` descriptions above the command line.
+'ui.help' = { fg = "ariake-purple2" } # `:command` descriptions above the command line.
 
-'ui.highlight' = { bg = "ariake-highlight" } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
+'ui.highlight' = { bg = "ariake-grey5" } # selected contents of symbol pickers (spc-s, spc-S) and current line in buffer picker (spc-b).
 
-'ui.menu' = "ariake-method" # Autocomplete menu.
-'ui.menu.selected' = "ariake-constant" # Selected autocomplete item.
+'ui.menu' = "ariake-white" # Autocomplete menu.
+'ui.menu.selected' = "ariake-purple2" # Selected autocomplete item.
 
-'ui.popup' = "ariake-focus" # Documentation popups (space-k).
-'ui.popup.info' = "ariake-focus" # Info popups box (space mode menu). { fg = "ariake-focus", bg = "ariake-background" }
+'ui.popup' = "ariake-purple2" # Documentation popups (space-k).
+'ui.popup.info' = "ariake-purple2" # Info popups box (space mode menu). { fg = "ariake-purple2", bg = "ariake-grey6" }
 
 
 # SYNTAX HIGHLIGHTING ==============================
 # All the keys here are Treesitter scopes.
 
 'property' = {} # Regex group names. Borrar
-'special' = "ariake-punctuation" # Special symbols e.g `?` in Rust, `...` in Hare.
-'attribute' = "ariake-attribute" # Class attributes, html tag attributes.
+'special' = "ariake-grey1" # Special symbols e.g `?` in Rust, `...` in Hare.
+'attribute' = "ariake-purple1" # Class attributes, html tag attributes.
 
-'type' = "ariake-attribute" # Variable type, like integer or string, including program defined classes, structs etc..
+'type' = "ariake-purple1" # Variable type, like integer or string, including program defined classes, structs etc..
 'type.builtin' = "ariake-string" # Primitive types of the language (string, int, float).
 'type.enum.variant' = { } # A variant of an enum. Borrar.
 
-'constructor' = { fg = "ariake-method", modifiers = ["bold"] } # Constructor method for a class or struct.
+'constructor' = { fg = "ariake-white", modifiers = ["bold"] } # Constructor method for a class or struct.
 
-'constant' = "ariake-constant"  # Constant value
-'constant.builtin' = "ariake-numeric-integer" # Special constants like `true`, `false`, `none`, etc.
+'constant' = "ariake-purple2"  # Constant value
+'constant.builtin' = "ariake-purple3" # Special constants like `true`, `false`, `none`, etc.
 'constant.builtin.boolean' = { } # True or False. Borrar
 'constant.character' = { } # Constant of character type. Borrar
 'constant.character.escape' = { } # escape codes like \n. Borrar
 'constant.numeric'  = { } # constant integer or float value. Borrar
-'constant.numeric.integer' = "ariake-numeric-integer" # constant integer value.
+'constant.numeric.integer' = "ariake-purple3" # constant integer value.
 'constant.numeric.float' = { } # constant float value. Borrar
 
 'string' = "ariake-string" # String literal.
-'string.regexp' = "ariake-operator" # Regular expression literal. Borrar
+'string.regexp' = "ariake-blue3" # Regular expression literal. Borrar
 'string.special' = { } # Strings containing a path, URL, etc. Borrar
 'string.special.path' = { } # String containing a file path. Borrar
 'string.special.url' = { } # String containing a web URL. Borrar
 'string.special.symbol' = { } # Erlang/Elixir atoms, Ruby symbols, Clojure keywords. Borrar
 
-'comment' = "ariake-comment" # This is a comment.
+'comment' = "ariake-grey2" # This is a comment.
 'comment.line' = { } # Line comments, like this. Borrar
 'comment.block' = { } # Block comments, like /* this */ in some languages. Borrar
 'comment.block.documentation' = { } # Doc comments, e.g '///' in rust. Borrar
 
-'variable' = "ariake-variable" # Variable names.
-'variable.builtin' = "ariake-variable" # Language reserved variables: `this`, `self`, `super`, etc.
-'variable.parameter' = "ariake-parameter" # Function parameters.
-'variable.other.member' = "ariake-diff-plus" # Fields of composite data types (e.g. structs, unions).
+'variable' = "ariake-blue4" # Variable names.
+'variable.builtin' = "ariake-blue4" # Language reserved variables: `this`, `self`, `super`, etc.
+'variable.parameter' = "ariake-grey3" # Function parameters.
+'variable.other.member' = "ariake-blue4" # Fields of composite data types (e.g. structs, unions).
 
-'label' = "ariake-ui-text" # Loop labels, among other things.
+'label' = "ariake-grey1" # Loop labels, among other things.
 
-'punctuation' = "ariake-punctuation" # Any punctuation symbol.
-'punctuation.delimiter' = "ariake-punctuation" # Commas, colons or other delimiter depending on the language.
-'punctuation.bracket' = "ariake-punctuation" # Parentheses, angle brackets, etc.
+'punctuation' = "ariake-grey1" # Any punctuation symbol.
+'punctuation.delimiter' = "ariake-grey1" # Commas, colons or other delimiter depending on the language.
+'punctuation.bracket' = "ariake-grey1" # Parentheses, angle brackets, etc.
 
-'keyword' = "ariake-import" # Language reserved keywords.
-'keyword.control' = "ariake-import" # Control keywords.
-'keyword.control.conditional' = "ariake-import" # `if`, `else`, `elif`.
-'keyword.control.repeat' = "ariake-import" # `for`, `while`, `loop`.
-'keyword.control.import' = "ariake-import" # `import`, `export` `use`.
-'keyword.control.return' = "ariake-import" # `return` in most languages.
-'keyword.control.exception' = "ariake-import" # `try`, `catch`, `raise`/`throw` and related.
-'keyword.operator' = "ariake-import" # `or`, `and`, `in`.
-'keyword.directive' = "ariake-import" # Preprocessor directives (#if in C...).
-'keyword.function' = "ariake-function" # The keyword to define a function: 'def', 'fun', 'fn'.
+'keyword' = "ariake-purple2" # Language reserved keywords.
+'keyword.control' = "ariake-purple2" # Control keywords.
+'keyword.control.conditional' = "ariake-purple2" # `if`, `else`, `elif`.
+'keyword.control.repeat' = "ariake-purple2" # `for`, `while`, `loop`.
+'keyword.control.import' = "ariake-purple2" # `import`, `export` `use`.
+'keyword.control.return' = "ariake-purple2" # `return` in most languages.
+'keyword.control.exception' = "ariake-purple2" # `try`, `catch`, `raise`/`throw` and related.
+'keyword.operator' = "ariake-purple2" # `or`, `and`, `in`.
+'keyword.directive' = "ariake-purple2" # Preprocessor directives (#if in C...).
+'keyword.function' = "ariake-purple2" # The keyword to define a function: 'def', 'fun', 'fn'.
 
-'operator' = { fg = "ariake-operator", modifiers = ["bold"] } # Logical, mathematical, and other operators.
+'operator' = { fg = "ariake-blue3", modifiers = ["bold"] } # Logical, mathematical, and other operators.
 
-'function' = "ariake-function"
+'function' = "ariake-purple2"
 'function.builtin' = { }
-'function.method' = { fg = "ariake-method", modifiers = ["bold"] } # Class / Struct methods.
+'function.method' = { fg = "ariake-white", modifiers = ["bold"] } # Class / Struct methods.
 'function.macro' = { }
 'function.special' = { } # Preprocessor function in C.
 
-'tag' = "ariake-tag" # As in <body> for html, css tags.
+'tag' = "ariake-blue2" # As in <body> for html, css tags.
 'tag.error' = "ariake-error" # Erroneous closing html tags.
 
 'namespace' = { } # Namespace or module identifier.
@@ -133,27 +133,27 @@ diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 # Markup ==============================
 # Colors for markup languages, like Markdown or XML.
 
-'markup.heading.1' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 1 color.
-'markup.heading.2' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 2 color.
-'markup.heading.3' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 3 color.
-'markup.heading.4' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 4 color.
-'markup.heading.5' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 5 color.
-'markup.heading.6' = { fg = "ariake-headings", modifiers = ["bold"] } # Markdown heading 6 color.
-'markup.heading.marker' = { fg = "ariake-headings", modifiers = ["bold"] } # Hashtag color on Markdown headings.
+'markup.heading.1' = { fg = "ariake-white", modifiers = ["bold"] } # Markdown heading 1 color.
+'markup.heading.2' = { fg = "ariake-white", modifiers = ["bold"] } # Markdown heading 2 color.
+'markup.heading.3' = { fg = "ariake-white", modifiers = ["bold"] } # Markdown heading 3 color.
+'markup.heading.4' = { fg = "ariake-white", modifiers = ["bold"] } # Markdown heading 4 color.
+'markup.heading.5' = { fg = "ariake-white", modifiers = ["bold"] } # Markdown heading 5 color.
+'markup.heading.6' = { fg = "ariake-white", modifiers = ["bold"] } # Markdown heading 6 color.
+'markup.heading.marker' = { fg = "ariake-white", modifiers = ["bold"] } # Hashtag color on Markdown headings.
 
 'markup.list' = { } # Borrar
 'markup.list.numbered' = { } # Numbered list. Borrar
 'markup.list.unnumbered' = { } # Bullet point list. Borrar
 
-'markup.bold' = { fg = "ariake-markup-bold", modifiers = ["bold"] } # Bold text.
-'markup.italic' = { fg = "ariake-markup-italic", modifiers = ["italic"] } # Italicised text.
+'markup.bold' = { fg = "ariake-purple3", modifiers = ["bold"] } # Bold text.
+'markup.italic' = { fg = "ariake-purple2", modifiers = ["italic"] } # Italicised text.
 
 'markup.link' = { } # Borrar
-'markup.link.url' = "ariake-markup-url" # Urls pointed to by links.
-'markup.link.label' = "ariake-markup-url" # Non-URL link references.
-'markup.link.text' = "ariake-markup-linktext" # URL and image descriptions in links.
+'markup.link.url' = "ariake-purple3" # Urls pointed to by links.
+'markup.link.label' = "ariake-purple3" # Non-URL link references.
+'markup.link.text' = "ariake-blue4" # URL and image descriptions in links.
 
-'markup.quote' = "ariake-markup-quote" # `> Quotes` in Markdown.
+'markup.quote' = "ariake-purple3" # `> Quotes` in Markdown.
 
 
 # Markup - Interface ==============================
@@ -175,10 +175,10 @@ diagnostic = "ariake-diagnostic" # Code diagnostics in editing area (LSP). Done
 # Diff ==============================
 # Version control changes.
 
-'diff.plus' = { fg = "ariake-diff-plus", modifiers = ["bold"] } # Additions.
-'diff.minus' = { fg = "ariake-diff-minus", modifiers = ["bold"]} # Deletions.
-'diff.delta' = { fg = "ariake-import" } # Modifications.
-'diff.delta.moved' = { fg = "ariake-variable", modifiers = ["italic"] } # Renamed or moved files.
+'diff.plus' = { fg = "ariake-blue4", modifiers = ["bold"] } # Additions.
+'diff.minus' = { fg = "ariake-purple2", modifiers = ["bold"]} # Deletions.
+'diff.delta' = { fg = "ariake-purple2" } # Modifications.
+'diff.delta.moved' = { fg = "ariake-blue4", modifiers = ["italic"] } # Renamed or moved files.
 
 
 [palette] # Define your custom colors here.
