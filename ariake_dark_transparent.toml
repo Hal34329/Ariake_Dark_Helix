@@ -26,9 +26,9 @@ diagnostic = "ariake-diagnostic"
 'ui.statusline.inactive' = "ariake-grey2" 
 'ui.help' = { fg = "ariake-purple2" } 
 'ui.highlight' = { bg = "ariake-grey5" } 
-'ui.menu' = "ariake-white" 
+'ui.menu' = { fg = "ariake-white", bg = "ariake-grey5" } 
 'ui.menu.selected' = "ariake-purple2" 
-'ui.popup' = "ariake-purple2" 
+'ui.popup' = { fg = "ariake-purple2", bg = "ariake-grey5"} 
 'ui.popup.info' = "ariake-purple2" 
 
 # Syntax style
